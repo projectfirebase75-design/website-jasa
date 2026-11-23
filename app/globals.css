@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-inter);
+}
+
+@layer utilities {
+  .container-max {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .heading-xl {
+    @apply text-4xl md:text-6xl font-bold tracking-tight;
+  }
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-white font-semibold transition hover:bg-accent-light hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy-800 px-6 py-3 font-semibold text-navy-900 transition hover:bg-navy-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-navy-800 focus:ring-offset-2;
+  }
+}
